@@ -1,0 +1,44 @@
+.nr-hc-zz {
+		transition:all 1s
+cubic-bezier(0.785, 0.135, 0.15, 0.86);
+animation:nrzzhc 1s;
+animation-fill-mode:forwards;
+	}
+
+
+	@keyframes nrzzhc
+{
+  0% {filter: blur(15px);transform:translateX(-10%);opacity:0;}
+  20% {filter: blur(8px);transform:translateX(-10%);opacity:0;}
+  100% {filter: blur(0px);transform:translateX(0%);opacity:1;}
+
+}
+
+.tc-close {
+	position:absolute;
+   top:2%;
+   right:2%;
+}
+
+#zz-black {
+    width:100%;
+    height:100%;
+    background-color:#000;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    opacity:0.5;
+    /*兼容IE8及以下版本浏览器*/
+    filter: alpha(opacity=50);
+    display:none;
+}
+
+#log_window {
+    background-color:rgba(0,0,0,0.5);    
+    margin: auto;
+    position:absolute;
+    display:none;
+    /*box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin:auto;*/
+}

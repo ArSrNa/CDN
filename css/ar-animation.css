@@ -1,8 +1,21 @@
+/*.navbar.navbar-transparent::before {
+  content: '',
+  top:0;right:0;bottom:0;left:0;
+  filter: blur(20px);
+  position: absolute;
+  margin:-30px;
+}*/
+
+.navbar {
+	background-color: rgba(255,255,255,1);
+	/*filter:blur(10px);*/
+}
+
 .bg-hero-blur::before {
-	animation:bgp 4s;
+animation:bgp 4s;
 animation-fill-mode:forwards;
-	background:transparent url(https://arsrnasitefr-1257609559.cos.ap-guangzhou.myqcloud.com/hdpic.jpg_WH);
-    z-index:-10;
+background:url(https://arsrnasitefr-1257609559.cos.ap-guangzhou.myqcloud.com/hdpic.jpg_WH);
+z-index:-10;
     background-size:cover;
     box-shadow:0 0 1px 3px #292929 inset;
 }
@@ -21,9 +34,10 @@ transition:all 4.5s
 cubic-bezier(0.785, 0.135, 0.15, 0.86);
 animation:nrhc 4.5s;
 animation-fill-mode:forwards;
-  top: 40%;
+top: 40%;
 position:absolute;
 }
+
 .img-hc {
 transition:all 4.5s
 cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -32,30 +46,45 @@ animation-fill-mode:forwards;
 }
 
 .loadingani {
-transition:all 3.5s
+transition:all 3s
 cubic-bezier(0.785, 0.135, 0.15, 0.86);
-animation:loading 3.5s;
+animation:loading 3s;
 animation-fill-mode:forwards;
 z-index:-8;
-left:20%;
+position:absolute;
 }
 
-.wholebody div{
-transition:all 4s
+.wholebody {
+transition:all 5s
 cubic-bezier(0.785, 0.135, 0.15, 0.86);
-animation:wholebody 6s;
+animation:wholebody 5s;
 animation-fill-mode:forwards;
 }
 
 
-.text-ani1 {
-{
-animation-delay:2s;
--webkit-animation-delay:2s; /* Safari 和 Chrome */
+/*.text-ania p{
+transition:all 5s
+cubic-bezier(0.785, 0.135, 0.15, 0.86);
+animation:text-ania 9s;
+animation-iteration-count: infinite;
 }
 
+.text-anib p{
+transition:all 5s
+cubic-bezier(0.785, 0.135, 0.15, 0.86);
+animation:text-anib 13s;
+animation-iteration-count: infinite;
 
-/*@keyframes imghc
+}
+
+.text-anic p{
+transition:all 5s
+cubic-bezier(0.785, 0.135, 0.15, 0.86);
+animation:text-anic 15s;
+animation-iteration-count: infinite;
+}
+
+@keyframes imghc
 {
   0% {filter: blur(20px);transform:translate(100%);opacity:1;z-index:-10;}
   20% {filter: blur(0px);transform:translate(0%);opacity:1;z-index:-10;}
@@ -65,14 +94,14 @@ animation-delay:2s;
 
 @keyframes titlehc
 {
-  0% {filter: blur(5px);transform:translateX(100%);opacity:0;}
-  80% {filter: blur(8px);transform:translateX(100%);opacity:0;}
+  0% {filter: blur(5px);transform:translateX(10%);opacity:0;}
+  80% {filter: blur(8px);transform:translateX(10%);opacity:0;}
   100% {filter: blur(0px);transform:translateX(0%);opacity:1;}
 }
 @keyframes nrhc
 {
-  0% {filter: blur(5px);transform:translateX(-100%);opacity:0;}
-  85% {filter: blur(8px);transform:translateX(-100%);opacity:0;}
+  0% {filter: blur(5px);transform:translateX(-10%);opacity:0;}
+  85% {filter: blur(8px);transform:translateX(-10%);opacity:0;}
   100% {filter: blur(0px);transform:translateX(0%);opacity:1;}
 }
 
@@ -80,22 +109,28 @@ animation-delay:2s;
 {
   0% {filter:blur(10px);opacity:0.5;}
   30% {filter:blur(0px);opacity:0.5;}
-  80% {filter:blur(0px);opacity:1;}
+  80% {filter:blur(5px);opacity:1;}
   100% {filter:blur(10px);opacity:0.5;}
 }
 
 @keyframes loading
 {
-  0% {filter:blur(10px);opacity:1;transform:translateX(100%);color:red;}
-  20% {filter:blur(0px);opacity:1;transform:translateX(5%);color:red;}
-  80% {filter:blur(0px);opacity:1;transform:translateX(5%);color:yellow;}
-  100% {filter:blur(10px);opacity:0;transform:translateX(0%);color:green;}
+  0% {filter:blur(10px);opacity:1;transform:translateX(10%);color:white;display:none}
+  20% {filter:blur(0px);opacity:1;transform:translateX(0%);color:white;}
+  80% {filter:blur(0px);opacity:1;transform:translateX(0%);color:yellow;}
+  100% {filter:blur(10px);opacity:0;transform:translateX(-100%);color:green;display:none;}
 }
 
 @keyframes wholebody
 {
-  0% {filter:blur(5px);opacity:0;}
-  70% {filter:blur(5px);opacity:0;}
+  0%,50% {filter:blur(5px);opacity:0;}
   100% {filter:blur(0px);opacity:1;}
-
 }
+
+
+/*@keyframes text-ania
+{
+  0%{filter: blur(5px);transform:translateX(-100%);opacity:0;}
+  15%,85% {filter: blur(0px);transform:translateX(0%);opacity:1;}
+  100% {filter: blur(8px);transform:translateX(100%);opacity:0;}
+}*/
